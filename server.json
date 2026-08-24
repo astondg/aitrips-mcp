@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.aitrips/trip-planner",
+  "title": "aitrips.io",
+  "description": "Plan trips on a map: routed transport, day-by-day itineraries, and a plan you can share.",
+  "version": "1.1.0",
+  "websiteUrl": "https://www.aitrips.io/?utm_source=mcp-registry&utm_medium=mcp-directory",
+  "repository": {
+    "url": "https://github.com/astondg/aitrips-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://www.aitrips.io/api/ai/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer token: use an API key (prefixed with tpk_) or an OAuth access token",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
